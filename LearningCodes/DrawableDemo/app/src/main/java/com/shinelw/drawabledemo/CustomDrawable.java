@@ -45,7 +45,7 @@ public class CustomDrawable extends Drawable {
 
     @Override
     public int getIntrinsicWidth() {
-        return 100;
+        return 200;
     }
 
     @Override
