@@ -53,6 +53,10 @@ public class MainActivity extends Activity {
 
                 );
                 set.setDuration(5* 1000).start();
+//                AnimatorSet set = (AnimatorSet) AnimatorInflater.loadAnimator(MainActivity.this, R.animator.property_animator);
+//                set.setTarget(button);
+//                set.start();
+
             }
         });
 
