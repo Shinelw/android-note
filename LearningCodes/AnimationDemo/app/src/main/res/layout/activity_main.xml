@@ -10,9 +10,10 @@
         android:text="text"
         android:layout_centerInParent="true"
         android:id="@+id/button"
-        android:visibility="gone"
+        android:visibility="visible"
         />
     <ListView
+        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/list"
