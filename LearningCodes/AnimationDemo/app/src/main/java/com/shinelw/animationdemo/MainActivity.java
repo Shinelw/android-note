@@ -31,7 +31,7 @@ public class MainActivity extends Activity {
             }
         });
         listview = (ListView) findViewById(R.id.list);
-       listview.setAdapter(new BaseAdapter() {
+        listview.setAdapter(new BaseAdapter() {
            @Override
            public int getCount() {
                return 10;
@@ -54,7 +54,7 @@ public class MainActivity extends Activity {
                textview.setText("item" + position);
                return view;
            }
-       });
+        });
     }
 
 }
