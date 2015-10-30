@@ -24,5 +24,20 @@
         android:dividerHeight="1.0px"
         android:listSelector="@android:color/transparent"
         />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button2"
+        android:text="button2"
+        android:layout_centerHorizontal="true"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="hello world"
+        android:id="@+id/textview"
+        android:background="#000000"
+        android:textColor="#ffffff"
+        />
 
 </RelativeLayout>
