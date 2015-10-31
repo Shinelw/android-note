@@ -44,7 +44,7 @@ public class MainActivity extends Activity {
                 ValueAnimator colorAnim = ObjectAnimator.ofInt(button, "backgroundColor", Color.RED, Color.BLUE);
                 colorAnim.setDuration(3000);
                 colorAnim.setEvaluator(new ArgbEvaluator());
-                colorAnim.setRepeatCount(ValueAnimator.INFINITE);
+                colorAnim.setRepeatCount(1);
                 colorAnim.setRepeatMode(ValueAnimator.REVERSE);
                 colorAnim.start();
 
@@ -100,7 +100,7 @@ public class MainActivity extends Activity {
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                ObjectAnimator.ofInt(button2, "width", button2.getMeasuredWidth(), 500, 50, button2.getMeasuredWidth()).setDuration(4000).start();
+                ObjectAnimator.ofInt(button2, "width", button2.getMeasuredWidth(), 500, 50, button2.getMeasuredWidth()).setDuration(4000).start();
 //                ObjectAnimator.ofInt(textview, "width", 500).setDuration(4000).start();
                 performAnimatie(button2, button.getWidth(), 500);
             }
