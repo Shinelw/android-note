@@ -100,8 +100,9 @@ public class MainActivity extends Activity {
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ObjectAnimator.ofInt(button2, "width", button2.getMeasuredWidth(), 500, 50, button2.getMeasuredWidth()).setDuration(4000).start();
-                ObjectAnimator.ofInt(textview, "width", 500).setDuration(4000).start();
+//                ObjectAnimator.ofInt(button2, "width", button2.getMeasuredWidth(), 500, 50, button2.getMeasuredWidth()).setDuration(4000).start();
+//                ObjectAnimator.ofInt(textview, "width", 500).setDuration(4000).start();
+                performAnimatie(button2, button.getWidth(), 500);
             }
         });
 
@@ -119,8 +120,13 @@ public class MainActivity extends Activity {
                 Log.d("MainActivity", "current value :" + currentValue);
 
                 //获得当前进度占整个动画过程的比例
+                float fractation = animation.getAnimatedFraction();
+                //直接调用整型估值器， 通过比例计算出宽度， 然后再设置给button
+                target.getLayoutParams().width = mEvaluator.evaluate(fractation, start, end);
+                target.requestLayout();
             }
         });
+        valueAnimator.setDuration(5000).start();
     }
 
 }
