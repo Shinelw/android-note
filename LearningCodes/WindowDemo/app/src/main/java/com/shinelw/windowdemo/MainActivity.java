@@ -38,6 +38,7 @@ public class MainActivity extends Activity {
                         mLayoutParams.x = x;
                         mLayoutParams.y = y;
                         mWindowManager.updateViewLayout(mFloatingButton, mLayoutParams);
+                        //tired
                         break;
                     default:
                         break;
