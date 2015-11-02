@@ -16,7 +16,7 @@
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
             app:expandedTitleMarginStart="50dp"
-            app:contentScrim="#000000"
+            app:contentScrim="#77db93"
             >
             <ImageView
                 android:layout_width="match_parent"
