@@ -9,11 +9,17 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity">
-
-    <TextView
-        android:layout_width="wrap_content"
+    <android.support.design.widget.TabLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:id="@+id/tab"
+        app:tabTextColor="@android:color/black"
+        app:tabSelectedTextColor="@android:color/holo_blue_light"
+        app:tabIndicatorColor="@android:color/holo_red_dark"
+        app:tabIndicatorHeight="5dp"
+        app:tabMode="scrollable"
+        android:background="@android:color/holo_green_light"
+        ></android.support.design.widget.TabLayout>
     <android.support.design.widget.FloatingActionButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -37,6 +43,5 @@
             android:layout_height="wrap_content"
             android:id="@+id/et"
             />
-
     </android.support.design.widget.TextInputLayout>
 </LinearLayout>

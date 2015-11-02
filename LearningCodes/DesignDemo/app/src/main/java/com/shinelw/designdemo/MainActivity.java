@@ -3,6 +3,7 @@ package com.shinelw.designdemo;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.design.widget.TabLayout;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
@@ -15,10 +16,11 @@ import static android.view.View.*;
 public class MainActivity extends AppCompatActivity {
     private TextInputLayout textInputLayout;
     private FloatingActionButton button;
+    private TabLayout tabLayout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.navigation_layout);
         textInputLayout = (TextInputLayout) findViewById(R.id.layout_textinput);
         EditText e = textInputLayout.getEditText();
         e.addTextChangedListener(new TextWatcher() {
@@ -58,7 +60,17 @@ public class MainActivity extends AppCompatActivity {
                 });
             }
         });
-
+        tabLayout = (TabLayout) findViewById(R.id.tab);
+        tabLayout.addTab(tabLayout.newTab().setText("tab 1"));
+        tabLayout.addTab(tabLayout.newTab().setText("tab 2"));
+        tabLayout.addTab(tabLayout.newTab().setText("tab 3"));
+        tabLayout.addTab(tabLayout.newTab().setText("tab 4"));
+        tabLayout.addTab(tabLayout.newTab().setText("tab 4"));
+        tabLayout.addTab(tabLayout.newTab().setText("tab 4"));
+        tabLayout.addTab(tabLayout.newTab().setText("tab 4"));
+        tabLayout.addTab(tabLayout.newTab().setText("tab 4"));
+        tabLayout.addTab(tabLayout.newTab().setText("tab 4"));
+        tabLayout.addTab(tabLayout.newTab().setText("tab 4"));
     }
 
 }
