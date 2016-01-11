@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <Button
+        android:id="@+id/btn_pay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_vertical_margin"
+        android:layout_marginRight="@dimen/activity_vertical_margin"
+        android:text="支付"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        />
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/layout_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/activity_horizontal_margin"
+        >
+    <TextView
+        android:text="检测到你当前支付账号和手机号处于异地，向手机号发送短信，情填写验证码"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/et_yanzhengma"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="短信验证码"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

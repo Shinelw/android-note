@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:padding="10dp"
+    android:orientation="vertical">
+    <Button
+        android:id="@+id/btn_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="地理位置信息"
+        android:textSize="16sp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        />
+    <Button
+        android:id="@+id/btn_pay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="支付"
+        android:textSize="16sp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        />
+    <TextView
+        android:id="@+id/tv_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="本机号码："
+        android:layout_marginTop="10dp"
+        />
+
+</LinearLayout>

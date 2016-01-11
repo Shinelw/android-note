@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/activity_vertical_margin"
+    android:background="#ffffff"
+    >
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Permissions"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        />
+
+    <LinearLayout
+        android:gravity="bottom"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <ProgressBar
+        android:id="@+id/pb_load"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        />
+        <TextView
+            android:id="@+id/tv_load"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="加载中..."
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:textSize="16sp"
+            />
+    </LinearLayout>
+
+</RelativeLayout>
