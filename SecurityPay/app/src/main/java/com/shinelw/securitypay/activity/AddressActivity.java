@@ -24,6 +24,7 @@ public class AddressActivity extends AppCompatActivity {
     private double curLng;
     private LatLng simLatLng;
     private LatLng curLatLng;
+    private TextView noteText;
 
 
 
@@ -38,6 +39,7 @@ public class AddressActivity extends AppCompatActivity {
         phoneLoc = (TextView) findViewById(R.id.tv_phone);
         simLoc = (TextView) findViewById(R.id.tv_sim);
         distance = (TextView) findViewById(R.id.tv_distance);
+        noteText = (TextView) findViewById(R.id.tv_note);
         curLat = Double.valueOf(Constant.curLat);
         curLng = Double.valueOf(Constant.curLng);
         curLatLng = new LatLng(curLat, curLng);
@@ -58,6 +60,11 @@ public class AddressActivity extends AppCompatActivity {
                 }
             }
         });
+        if (!Constant.phoneNumber.equals(Constant.simNumber)) {
+            noteText.setText("警告！当前登陆手机与账户绑定手机不一致！");
+        }else {
+            noteText.setText("安全！当前登陆手机与账户绑定手机一致！");
+        }
     }
 
 }

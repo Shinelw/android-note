@@ -12,7 +12,7 @@ public class Constant {
     public static String phoneNumber;
     public static String simNumber;
 
-    public static String curLat;
-    public static String curLng;
+    public static String curLat = "30.759913";
+    public static String curLng = "103.939839";
 
 }

@@ -2,9 +2,47 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center_horizontal"
     android:padding="10dp"
     android:orientation="vertical">
+    <TextView
+        android:id="@+id/tv_note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="提示："
+        android:layout_marginTop="10dp"
+        android:textSize="25sp"
+        />
+    <TextView
+        android:textSize="18sp"
+        android:id="@+id/tv_binder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="账户绑定手机号："
+        android:layout_marginTop="10dp"
+        />
+    <TextView
+        android:textSize="18sp"
+        android:id="@+id/tv_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="本机号码："
+        android:layout_marginTop="10dp"
+        />
+    <TextView
+        android:textSize="18sp"
+        android:id="@+id/tv_bankcard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="绑定银行卡号：6217 0018 2001 2520 111"
+        android:layout_marginTop="10dp"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="bottom"
+        android:layout_marginBottom="10dp"
+        >
     <Button
         android:id="@+id/btn_address"
         android:layout_width="match_parent"
@@ -18,17 +56,21 @@
         android:id="@+id/btn_pay"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="支付"
+        android:text="我要支付"
         android:textSize="16sp"
         android:paddingTop="20dp"
         android:paddingBottom="20dp"
         />
-    <TextView
-        android:id="@+id/tv_number"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="本机号码："
-        android:layout_marginTop="10dp"
-        />
+        <Button
+            android:id="@+id/btn_userinfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="绑定银行卡"
+            android:textSize="16sp"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            />
+    </LinearLayout>
+
 
 </LinearLayout>

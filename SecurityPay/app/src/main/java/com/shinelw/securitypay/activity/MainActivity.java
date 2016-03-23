@@ -21,6 +21,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private TextView phoneNumber;
     private Button payBtn;
     private long exitTime;
+    private TextView noteText;
+    private TextView binderText;
+    private TextView bankCarText;
+    private Button userInfoBtn;
 
 
     @Override
@@ -36,10 +40,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         addressBtn = (Button) findViewById(R.id.btn_address);
         addressBtn.setOnClickListener(this);
         phoneNumber = (TextView) findViewById(R.id.tv_number);
+        noteText = (TextView) findViewById(R.id.tv_note);
+        binderText = (TextView) findViewById(R.id.tv_binder);
+        bankCarText = (TextView) findViewById(R.id.tv_bankcard);
+        userInfoBtn = (Button) findViewById(R.id.btn_userinfo);
         payBtn = (Button) findViewById(R.id.btn_pay);
         payBtn.setOnClickListener(this);
-        phoneNumber.setText("当前手机号码:" + Constant.phoneNumber + "\n账户绑定sim卡手机号码：" + Constant.simNumber);
+        phoneNumber.setText("当前手机号码：" + Constant.phoneNumber);
+        binderText.setText("账户绑定手机号：" + Constant.simNumber);
 
+        if (!Constant.phoneNumber.equals(Constant.simNumber)) {
+            noteText.setText("警告！当前登陆手机与账户绑定手机不一致！");
+        }else {
+            noteText.setText("安全！当前登陆手机与账户绑定手机一致！");
+        }
 
     }
 

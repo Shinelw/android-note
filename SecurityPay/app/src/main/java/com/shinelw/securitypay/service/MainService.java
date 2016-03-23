@@ -125,6 +125,8 @@ public class MainService extends Service {
                     sb.append(p.getId() + " " + p.getName() + " " + p.getRank());
                 }
             }
+            Constant.curLat = lat;
+            Constant.curLng = lng;
             if (Constant.phoneObjectId != null && Constant.phoneObjectId.length() > 0) {
                 update(lat, lng);
             }

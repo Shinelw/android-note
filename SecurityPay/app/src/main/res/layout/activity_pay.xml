@@ -1,39 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
-    <Button
-        android:id="@+id/btn_pay"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/activity_vertical_margin"
-        android:layout_marginRight="@dimen/activity_vertical_margin"
-        android:text="支付"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="20dp"
-        />
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="支付请求："
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="iPhone 6s  x1 价格：6666"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="iPhone 5s  x1 价格：5555"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="iPhone 4s  x1 价格：4444"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="iPhone 3s  x1 价格：3333"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_note"
+            android:text="提示："
+            android:textSize="20sp"
+            android:layout_marginTop="16dp"
+            />
+
+    </LinearLayout>
+
     <LinearLayout
-        android:visibility="gone"
         android:id="@+id/layout_msg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="@dimen/activity_horizontal_margin"
-        >
-    <TextView
-        android:text="检测到你当前支付账号和手机号处于异地，向手机号发送短信，情填写验证码"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:visibility="gone">
+
+        <TextView
+            android:textSize="18sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="检测到你当前支付账号和绑定手机号处于异地，已向绑定手机号发送短信，请填写验证码" />
+
         <EditText
             android:id="@+id/et_yanzhengma"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="短信验证码"
             android:layout_marginTop="@dimen/activity_vertical_margin"
-            />
+            android:hint="短信验证码" />
 
 
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        >
+        <Button
+            android:id="@+id/btn_pay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="我要支付"
+            android:textSize="16sp"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            />
 
-</RelativeLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

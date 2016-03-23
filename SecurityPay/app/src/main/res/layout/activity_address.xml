@@ -9,24 +9,37 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:orientation="vertical"
     tools:context="com.shinelw.securitypay.activity.AddressActivity">
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="手机当前位置："
+        android:textSize="25sp"
+        android:id="@+id/tv_note"
+        android:text="提示："
+        android:layout_marginBottom="16dp"
         />
     <TextView
+        android:textSize="18sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="登陆手机当前位置："
+        />
+    <TextView
+        android:textSize="18sp"
         android:id="@+id/tv_phone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="XXXXX"
         />
     <TextView
+        android:textSize="18sp"
         android:layout_marginTop="@dimen/activity_vertical_margin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="手机SIM卡位置："
+        android:text="绑定该账号手机SIM位置："
         />
     <TextView
+        android:textSize="18sp"
         android:id="@+id/tv_sim"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -34,12 +47,14 @@
         />
 
     <TextView
+        android:textSize="18sp"
         android:layout_marginTop="@dimen/activity_vertical_margin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="手机与SIM卡距离："
         />
     <TextView
+        android:textSize="18sp"
         android:id="@+id/tv_distance"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
