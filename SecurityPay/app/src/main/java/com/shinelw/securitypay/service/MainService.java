@@ -125,7 +125,9 @@ public class MainService extends Service {
                     sb.append(p.getId() + " " + p.getName() + " " + p.getRank());
                 }
             }
-            update(lat, lng);
+            if (Constant.phoneObjectId != null && Constant.phoneObjectId.length() > 0) {
+                update(lat, lng);
+            }
             Log.i("BaiduLocationApiDem", sb.toString());
 
         }
