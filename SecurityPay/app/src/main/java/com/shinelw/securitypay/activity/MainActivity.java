@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.shinelw.securitypay.R;
 import com.shinelw.securitypay.service.MainService;
@@ -19,6 +20,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button addressBtn;
     private TextView phoneNumber;
     private Button payBtn;
+    private long exitTime;
 
 
     @Override
@@ -52,6 +54,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(new Intent(MainActivity.this, PayActivity.class));
                 break;
 
+        }
+    }
+
+
+    @Override
+    public void onBackPressed() {
+        if (System.currentTimeMillis() - exitTime > 2000) {
+            Toast.makeText(MainActivity.this, "再按一次退出", Toast.LENGTH_SHORT).show();
+            exitTime = System.currentTimeMillis();
+        }else {
+            finish();
         }
     }
 }
