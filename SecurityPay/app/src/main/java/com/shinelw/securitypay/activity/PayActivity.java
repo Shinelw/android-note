@@ -109,7 +109,9 @@ public class PayActivity extends AppCompatActivity  implements View.OnClickListe
             public void done(AVException e) {
                 if (e == null) {
                     Toast.makeText(PayActivity.this, "验证成功，已进行支付", Toast.LENGTH_SHORT).show();
+                    finish();
                 } else {
+                    Toast.makeText(PayActivity.this, "验证码错误，支付失败", Toast.LENGTH_SHORT).show();
                     Log.e("Home.DoOperationVerify", e.getMessage());
                 }
             }
@@ -122,7 +124,7 @@ public class PayActivity extends AppCompatActivity  implements View.OnClickListe
         }
         Double distance = DistanceUntils.getDistance(curLatLng, simLatLng);
         Log.i("distance", distance + "");
-        if (distance < 100) {
+        if (distance < 2) {
             return false;
         }else {
             return true;
