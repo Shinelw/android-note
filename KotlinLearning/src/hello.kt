@@ -20,6 +20,22 @@ fun main(args: Array<String>) {
     println(max)
     val  bbb = BaseImpl(10)
     Derived(bbb).print()
+
+    println(numbers)
+    numbers.add(4)
+    println(numbers)
+    println(readOnlyView)
+
+    val strings = hashSetOf("a", "b", "c", "c")
+    assert(strings.size == 3)
+
+    for  (i in 1..10){
+        println(i)
+    }
+
+    for (i in 4 downTo 1){
+        println(i)
+    }
 }
 
 
@@ -176,3 +192,12 @@ val doubled = ints.map{it -> it * 2}
 
 
 val sum = {x: Int, y: Int -> x + y}
+
+
+//解构声明
+//data class Result(val result: Int, val status: Status)
+
+//集合
+val numbers: MutableList<Int> = mutableListOf(1, 2, 3)
+val readOnlyView: List<Int> = numbers
+
