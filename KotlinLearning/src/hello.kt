@@ -13,6 +13,8 @@ fun main(args: Array<String>) {
     cases("hello")
     cases(3)
     cases("fjsldfl")
+    println(text)
+    println(max)
 }
 
 
@@ -35,4 +37,45 @@ fun cases(obj: Any){
         else        -> println("unknown")
     }
 }
+
+
+//继承
+open class Base(p : Int){
+    open fun a(){}
+    fun b(){}
+}
+
+
+class Derived(p: Int) : Base(p){
+    override fun a() {
+        super.a()
+    }
+
+}
+
+
+
+//显示转换
+
+
+val text = """
+    |Tell me and I forget.
+    |Teach me and I remember.
+    |Involve me and I learn.
+    |(Benjamin Franklin)
+    """.trimMargin()
+
+
+val b = 2
+//val max = if (a > b) a else b
+
+val max = if(a > b){
+    println("choose a")
+    a
+}else{
+    println("choose b")
+    b
+}
+
+
 
