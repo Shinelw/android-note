@@ -77,5 +77,20 @@ val max = if(a > b){
     b
 }
 
+interface MyInterface{
+    val prop: Int
+    val properyWithImplementation: String
+    get() = "foo"
+
+    fun foo(){
+        print(prop)
+    }
+}
+
+
+class Child : MyInterface{
+    override val prop: Int = 29
+}
+
 
 
