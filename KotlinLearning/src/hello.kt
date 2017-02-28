@@ -1,4 +1,5 @@
 import java.util.*
+import java.util.concurrent.locks.Lock
 
 /**
  * Created by peixuan on 2017/2/27.
@@ -151,3 +152,27 @@ val list = arrayOf(1, 2, 3)
 val list2 = asList(-1, 0, *list, 4)
 
 
+//高阶函数
+fun <T> lock(lock: Lock, body: () -> T): T {
+    lock.lock()
+    try {
+        return body()
+    }finally {
+        lock.unlock()
+    }
+}
+
+fun <T, R> List<T>.map(transform: (T) -> R): List<R> {
+    val result = arrayListOf<R>()
+    for (item in this){
+        result.add(transform(item))
+    }
+    return result
+}
+
+//Lambda
+val ints = arrayListOf(1,2,3,4)
+val doubled = ints.map{it -> it * 2}
+
+
+val sum = {x: Int, y: Int -> x + y}
