@@ -201,3 +201,22 @@ val sum = {x: Int, y: Int -> x + y}
 val numbers: MutableList<Int> = mutableListOf(1, 2, 3)
 val readOnlyView: List<Int> = numbers
 
+
+
+fun demo(x: Any){
+    if (x is String){
+        println(x.length) // 自动转换成字符串
+    }
+
+    if (x !is String) return
+
+    println(x.length)
+}
+
+
+
+
+
+
+
+
