@@ -1,3 +1,5 @@
+import java.util.*
+
 /**
  * Created by peixuan on 2017/2/27.
  */
@@ -15,6 +17,8 @@ fun main(args: Array<String>) {
     cases("fjsldfl")
     println(text)
     println(max)
+    val  bbb = BaseImpl(10)
+    Derived(bbb).print()
 }
 
 
@@ -37,22 +41,6 @@ fun cases(obj: Any){
         else        -> println("unknown")
     }
 }
-
-
-//继承
-open class Base(p : Int){
-    open fun a(){}
-    fun b(){}
-}
-
-
-class Derived(p: Int) : Base(p){
-    override fun a() {
-        super.a()
-    }
-
-}
-
 
 
 //显示转换
@@ -80,7 +68,7 @@ val max = if(a > b){
 interface MyInterface{
     val prop: Int
     val properyWithImplementation: String
-    get() = "foo"
+        get() = "foo"
 
     fun foo(){
         print(prop)
@@ -92,5 +80,74 @@ class Child : MyInterface{
     override val prop: Int = 29
 }
 
+
+class Box<T>(t : T){
+    var value = t
+
+}
+
+
+class Outer {
+    private var bar : Int = 1
+    inner class Inner {
+        fun foo() = bar
+    }
+}
+
+var demo : Int = Outer().Inner().foo()
+
+enum class Direction {
+    NORTH, WEST, SOUTH, EAST
+}
+
+
+
+interface Base {
+    fun print()
+}
+
+class BaseImpl(val x: Int) : Base {
+    override fun print() {
+        print(x)
+    }
+}
+
+class Derived(b: Base) : Base by b
+
+
+//函数
+fun double(x: Int): Int {
+    return x
+}
+
+val result = double(2)
+
+//默认参数
+fun read(b: Array<Byte>, off: Int = 0, len: Int = b.size) {
+
+}
+
+//返回Unit的函数
+fun printHello(name: String?): Unit {
+    if(name != null){
+        println("hello %{name}")
+    }else{
+        println("Hi there!")
+    }
+}
+
+
+//可变数量的参数（Varargs）
+fun <T> asList(vararg ts: T): List<T> {
+    val result = ArrayList<T>()
+    for(t in ts){
+        result.add(t)
+    }
+    return result
+}
+
+val list = arrayOf(1, 2, 3)
+
+val list2 = asList(-1, 0, *list, 4)
 
 
